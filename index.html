@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Center | Mainkan Tetris, Block Dash, Ular!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login/Register Section -->
+  <div id="auth-section" class="centered-box">
+    <h2>Masuk / Daftar</h2>
+    <form id="login-form" autocomplete="off">
+      <input type="text" id="username" placeholder="Nama Pengguna" required>
+      <input type="password" id="password" placeholder="Kata Sandi" required>
+      <button type="submit">Masuk</button>
+      <p id="login-error" class="error-msg"></p>
+    </form>
+    <hr>
+    <form id="register-form" autocomplete="off">
+      <input type="text" id="reg-username" placeholder="Nama Pengguna Baru" required>
+      <input type="password" id="reg-password" placeholder="Kata Sandi Baru" required>
+      <button type="submit">Daftar</button>
+      <p id="register-error" class="error-msg"></p>
+    </form>
+  </div>
+
+  <!-- Main Content Section -->
+  <div id="main-section" style="display:none;">
+    <header>
+      <h1>Game Center</h1>
+      <button id="logout-btn">Keluar</button>
+    </header>
+    <nav>
+      <button class="game-btn" data-game="tetris">Tetris</button>
+      <button class="game-btn" data-game="blockdash">Block Dash</button>
+      <button class="game-btn" data-game="snake">Ular</button>
+    </nav>
+    <main>
+      <section id="welcome" class="centered-box">
+        <p>Selamat datang di Game Center! Pilih game di atas untuk mulai bermain.</p>
+      </section>
+      <!-- Game Canvases -->
+      <section id="game-tetris" class="game-canvas-section" style="display:none;">
+        <h2>Tetris</h2>
+        <canvas id="tetris-canvas" width="320" height="640"></canvas>
+        <div class="game-controls">Kontrol: Panah ← →, ↓, ↑ (rotasi), Spasi (jatuh cepat)</div>
+        <div id="tetris-score"></div>
+      </section>
+      <section id="game-blockdash" class="game-canvas-section" style="display:none;">
+        <h2>Block Dash</h2>
+        <canvas id="blockdash-canvas" width="400" height="600"></canvas>
+        <div class="game-controls">Kontrol: Spasi (lompat), Panah Atas (lompat)</div>
+        <div id="blockdash-score"></div>
+      </section>
+      <section id="game-snake" class="game-canvas-section" style="display:none;">
+        <h2>Ular</h2>
+        <canvas id="snake-canvas" width="400" height="400"></canvas>
+        <div class="game-controls">Kontrol: Panah ← ↑ → ↓</div>
+        <div id="snake-score"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 GameCenter.id | Grafik Detail & Jernih</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

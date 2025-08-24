@@ -1,0 +1,153 @@
+body {
+    background: linear-gradient(120deg, #c1eaff 0%, #f8faff 100%);
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #223;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1f7bc1;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    box-shadow: 0 2px 12px #0002;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  #logout-btn {
+    background: #fff;
+    color: #1f7bc1;
+    border: none;
+    padding: 0.7em 1.3em;
+    border-radius: 1.2em;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  #logout-btn:hover {
+    background: #fcb900;
+    color: #fff;
+  }
+  nav {
+    margin: 2.2rem 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  nav button {
+    background: #fff;
+    border: 3px solid #1f7bc1;
+    color: #1f7bc1;
+    padding: 1.1em 2.2em;
+    font-size: 1.12em;
+    font-weight: 600;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 1px 6px #0001;
+  }
+  nav button.active, nav button:hover {
+    background: #1f7bc1;
+    color: #fff;
+  }
+  main {
+    max-width: 780px;
+    margin: 1.5rem auto 1rem auto;
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 40px #0001;
+    padding: 2rem 1.5rem;
+    min-height: 350px;
+  }
+  .centered-box {
+    max-width: 380px;
+    margin: 2.5rem auto 2rem auto;
+    padding: 2rem 1.2rem 1.2rem 1.2rem;
+    background: #fff;
+    border-radius: 1.3rem;
+    box-shadow: 0 4px 20px #0002;
+    text-align: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  input[type="text"], input[type="password"] {
+    padding: 0.7em;
+    border-radius: 0.8em;
+    border: 1.8px solid #b8cbe6;
+    font-size: 1em;
+    background: #f6faff;
+    outline: none;
+  }
+  button[type="submit"] {
+    background: #1f7bc1;
+    color: #fff;
+    border: none;
+    padding: 0.8em 0;
+    border-radius: 1em;
+    font-size: 1.08em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.18s;
+  }
+  button[type="submit"]:hover {
+    background: #fcb900;
+    color: #223;
+  }
+  .error-msg {
+    color: #e74c3c;
+    font-size: 0.98em;
+    margin: 0.2em 0 0.6em 0;
+  }
+  .game-canvas-section {
+    text-align: center;
+  }
+  canvas {
+    background: #e6f1fa;
+    display: block;
+    margin: 0 auto 1.2em auto;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px #1f7bc132;
+  }
+  .game-controls {
+    background: #f1f8ff;
+    border-left: 5px solid #1f7bc1;
+    border-radius: 0.6em;
+    padding: 0.5em 1em;
+    margin-bottom: 1.2em;
+    color: #1f7bc1;
+    font-size: 1em;
+    font-weight: 500;
+  }
+  footer {
+    background: #1f7bc1;
+    color: #fff;
+    text-align: center;
+    padding: 1.2rem 0 0.7rem 0;
+    font-size: 1em;
+    margin-top: 2rem;
+    border-top: 4px solid #fcb900;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+  @media (max-width: 700px) {
+    header, main, .centered-box, footer {
+      border-radius: 0;
+      padding: 1rem 0.2rem;
+      margin: 0;
+    }
+    nav {
+      gap: 0.3rem;
+    }
+  }
